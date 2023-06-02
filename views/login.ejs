@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .comp_name{
+            display: flex;
+            height: 100%;
+            background-color: rgba(85, 92, 92, 0);
+            align-items: center;
+            margin-left:5%;
+            color: aliceblue;
+            font-size: 100px;
+        }
+
+        .note{
+            background-color: rgb(85, 92, 92);
+        }
+        body {
+            background-color: rgb(85, 92, 92);
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .row {
+            flex: 1;
+        }
+
+        .Login{
+            color: aliceblue;
+        }
+
+        .form1{
+            margin-top: 50%;
+            margin-bottom: 50%;
+            align-items: center;
+            background-color:rgba(235, 237, 238, 0.479);
+            padding: 2%;
+            border-radius: 20px;
+        }
+            
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col note">
+                    <h1 class="comp_name">Loonlabs Medi Center</h1>
+                </div>
+                <div class="col">
+                    <form class="form1" classaction="/login" method="POST">
+                        <div class="form-group">
+                            <h1 class="Login">Login</h1>
+                            <br>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input class="form-control" id="exampleInputEmail1"
+                                type="email" name="username"
+                                placeholder="username">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Password</label>
+                            <input class="form-control" id="exampleInputEmail1"type="password" name="password"
+                                placeholder="password">
+                            <small>Dont have an account, <a href="/register">Register</a></small>
+                            <br><br>
+                            <button type="submit" class="btn btn-primary">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+                // Disable the back button of the browser
+                history.pushState(null, null, location.href);
+                window.onpopstate = function () {
+                  history.go(1);
+                };
+              </script>
+    </body>
+
+</html>
