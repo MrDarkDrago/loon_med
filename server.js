@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
     }
 });
 
-console.log(uploadedFileName)
+// console.log(uploadedFileName)
 const upload = multer({ storage: storage });
 
 app.post('/store_data', upload.single('image'), (req, res) => {
@@ -192,7 +192,6 @@ app.post('/logout', (req, res) => {
         res.redirect('/login');
     });
 });
-
 
 app.listen(3000);
 
